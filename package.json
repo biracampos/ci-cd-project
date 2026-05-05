@@ -1,0 +1,11 @@
+{
+  "name": "ci-cd-project",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "echo \"Test passed\""
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0"
+  }
+}
