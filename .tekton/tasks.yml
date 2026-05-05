@@ -9,3 +9,16 @@ spec:
       script: |
         echo "Cleaning workspace..."
         rm -rf node_modules
+---
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: test-task
+spec:
+  steps:
+    - name: run-tests
+      image: node:18
+      script: |
+        echo "Running tests..."
+        npm install
+        npm test
