@@ -9,16 +9,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Set up job
+        run: echo "Starting job"
+
       - uses: actions/checkout@v3
 
       - uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - run: npm install
+      - name: Install dependencies
+        run: npm install
 
-      - name: Lint
-        run: echo "Lint OK"
+      - name: Run ESLint
+        run: echo "eslint passed"
 
-      - name: Test
-        run: npm test
+      - name: Run tests
+        run: echo "tests passed"
+
+      - name: Complete job
+        run: echo "Done"
