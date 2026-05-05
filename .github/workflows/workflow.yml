@@ -21,11 +21,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run ESLint
-        run: echo "eslint passed"
+      - name: flake8/eslint
+        run: npx eslint .
 
-      - name: Run tests
-        run: echo "tests passed"
+      - name: nose/jest
+        run: npx jest --passWithNoTests
 
       - name: Complete job
         run: echo "Done"
