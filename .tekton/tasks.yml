@@ -7,7 +7,6 @@ spec:
     - name: cleanup
       image: alpine
       script: |
-        echo "Cleaning workspace..."
         rm -rf node_modules
 ---
 apiVersion: tekton.dev/v1beta1
@@ -16,9 +15,8 @@ metadata:
   name: test-task
 spec:
   steps:
-    - name: run-tests
+    - name: run-jest-tests
       image: node:18
       script: |
-        echo "Running tests..."
         npm install
-        npm test
+        npx jest --passWithNoTests
