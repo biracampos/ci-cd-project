@@ -1,7 +1,5 @@
-# CI/CD Pipeline Project
+# CI/CD Final Project
 
-Pipeline completo usando GitHub Actions, Tekton e OpenShift.
+This is the ci-cd-final-project.
 
-- Lint com ESLint
-- Testes automatizados
-- Pipeline CI/CD
+This project demonstrates a CI/CD pipeline using GitHub Actions and OpenShift.
